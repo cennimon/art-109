@@ -1,0 +1,40 @@
+.title {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.square {
+    background-color: brown;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    margin: 50px auto;
+    transition: all 1s;
+}
+
+/*classes (.abc) = multiple elements id (#abc) = one specific element
+div = block element = whole width / anchor tag = inline element*/
+
+.square:hover {
+    background-color: rgb(91, 27, 4);
+    transform: rotate(30deg);
+}
+
+.button-div {
+    text-align: center;
+}
+
+.button {
+    color: antiquewhite;
+    background-color: cadetblue;
+    padding: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all .5s;
+}
+
+.button:hover {
+    background-color: darkolivegreen;
+    color: rgb(247, 206, 103);
+    transform: scale(1.3);
+}

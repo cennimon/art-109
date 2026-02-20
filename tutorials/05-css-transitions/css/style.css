@@ -1,0 +1,138 @@
+body {
+    animation: change-color 3s infinite alternate;
+}
+
+@keyframes change-color {
+    0% {
+        background-color: rgb(231, 217, 199);
+    }
+
+    50% {
+        background-color: rgb(145, 158, 122);
+    }
+
+    100% {
+        background-color: rgb(181, 151, 110);
+    }
+}
+
+.title {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin: 80px auto;
+    animation: skew 3s infinite alternate;
+}
+
+@keyframes skew {
+    0% {
+        transform: skew(0deg, 0deg);
+    }
+
+    100% {
+        transform: skew(20deg, 20deg);
+    }
+}
+
+.square {
+    background-color: brown;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    margin: 50px auto;
+    transition: all 1s;
+}
+
+/*classes (.abc) = multiple elements id (#abc) = one specific element
+div = block element = whole width / anchor tag = inline element*/
+
+.square:hover {
+    background-color: rgb(91, 27, 4);
+    transform: rotate(30deg);
+}
+
+.button-div {
+    text-align: center;
+}
+
+.button {
+    color: antiquewhite;
+    background-color: cadetblue;
+    padding: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all .5s;
+}
+
+.button:hover {
+    background-color: darkolivegreen;
+    color: rgb(247, 206, 103);
+    transform: scale(1.3);
+}
+
+.loading {
+    background-color: rgb(104, 140, 152);
+    animation: stretch 4s infinite alternate;
+    width: 80vw;
+}
+
+@keyframes stretch {
+    0% {
+        width: 100px;
+    }
+
+    100% {
+        width: 80vw;
+    }
+}
+
+.button-div-2 {
+    text-align: left;
+}
+
+.button-2 {
+    color: antiquewhite;
+    background-color: rgb(214, 82, 77);
+    padding: 50px;
+    border-radius: 10px;
+    margin: 50px auto;
+    text-decoration: none;
+    display: inline-block;
+    transition: all .5s;
+}
+
+.button-2:hover {
+    background-color: rgb(115, 18, 18);
+    color: rgb(247, 206, 103);
+    transform: rotate(0.5turn) scale(2);
+}
+
+.button-div-3 {
+    text-align: right;
+}
+
+.button-3 {
+    font-family: papyrus;
+    color: antiquewhite;
+    background-color: cadetblue;
+    padding: 5px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    animation: weee 4s infinite alternate;
+}
+
+@keyframes weee {
+    0% {
+        transform: skew(0deg, 0deg);
+    }
+
+    50% {
+        transform: skew(20deg, 20deg);
+    }
+
+    100% {
+        transform: translate(-500px, 0px);
+        animation: ease-in-out
+    }
+}
