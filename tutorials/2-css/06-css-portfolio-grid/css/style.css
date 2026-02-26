@@ -1,0 +1,85 @@
+/* ------------- color palette */
+
+:root {
+    --bg-color-1: #454545;
+    --bg-color-2: #dbd7d2;
+    --font: #e1e1e1;
+    --accent-1: #697268;
+    --accent-2: #939d92;
+    --dark: #9c9c9c;
+}
+
+
+
+/* ------------- css resets */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* respect user font size preferences */
+html {
+    font-size: 100%;
+}
+
+/* ------------- general css */
+
+body {
+    background-color: var(--bg-color-1);
+    color: var(--font);
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header {
+    padding: 5rem 2rem;
+}
+
+header h1 {
+    text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--font);
+    margin: 0 1rem;
+    transition: all .3s ease;
+}
+
+nav a:hover {
+    color: var(--accent-2);
+}
+
+.about-content, .portfolio-content, .contact-content {
+    max-width: 60rem;
+    margin: 5rem auto;
+}
+
+footer {
+    padding: 1rem 2rem;
+}
+
+footer img {
+    display: inline;
+    max-width: 3rem;
+    margin: 0 0.5rem;
+}
+
+/* ------------- flex styling */
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-container-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-item-grid {
+    flex: 1 1 25%;
+}
