@@ -17,7 +17,7 @@ changeHeaderButton.addEventListener('click', () => {
 
 //create function for changing button text
 function changeButtonText() {
-    if (document.boby.classList.contains('dark')) {
+    if (document.body.classList.contains('dark')) {
         changeThemeButton.textContent = 'switch to light theme';
     } else {
         changeThemeButton.textContent = 'switch to dark theme';
