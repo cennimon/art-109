@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Jacquard+24&family=Macondo+Swash+Caps&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/baguetteBox.css">
 </head>
 
 <body>
@@ -42,17 +43,17 @@
                 <h2>my work</h2>
                 <div class="flex-container-grid">
                     <div class="portfolio-item flex-item-grid">
-                        <img src="images/ctrl-web.jpg" alt="gaming controller">
+                        <a href="images/ctrl-web.jpg" data-caption="ctrl"><img src="images/ctrl-web.jpg" alt="gaming controller"></a>
                         <h3>work title 1</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                     <div class="portfolio-item flex-item-grid">
-                        <img src="images/syringe-web.jpg" alt="dental syringe">
+                        <a href="images/syringe-web.jpg" data-caption="syringe"><img src="images/syringe-web.jpg" alt="dental syringe"></a>
                         <h3>work title 2</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                     <div class="portfolio-item flex-item-grid">
-                        <img src="images/camelbak-web.jpg" alt="water bottle">
+                        <a href="images/camelbak-web.jpg" data-caption="camelbak"><img src="images/camelbak-web.jpg" alt="water bottle"></a>
                         <h3>work title 3</h3>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
                     </div>
@@ -100,6 +101,12 @@
         </div>
     </footer>
     <script src="js/hamburger.js"></script>
+    <script src="js/baguetteBox.js"></script>
+    <script>
+        baguetteBox.run(".flex-container-grid", {
+            captions: true
+        })
+    </script>
 </body>
 
 </html>
