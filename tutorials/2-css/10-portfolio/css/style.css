@@ -1,9 +1,9 @@
 /* ------------- color palette */
 
 :root {
-    --bg-color-1: #454545;
-    --bg-color-2: #dbd7d2;
-    --font: #e1e1e1;
+    --bg-color-1: #e1e1e1;
+    --bg-color-2: #454545;
+    --font: #454545;
     --accent-1: #697268;
     --accent-2: #939d92;
     --dark: #9c9c9c;
@@ -53,30 +53,22 @@ html {
 body {
     background-color: var(--bg-color-1);
     color: var(--font);
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     line-height: 1.5;
     font-family: 'Courier New', Courier, monospace;
     /* text-align: justify; */
 }
 
 header {
-    padding: 5rem 2rem;
-    margin-bottom: 7rem;
+    padding: 2rem 2rem;
+    margin-bottom: 5rem;
 }
 
 header h1 {
-    text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
-}
-
-nav a {
     text-decoration: none;
     color: var(--font);
-    /* margin: 0 1rem; */
-    transition: all .3s ease;
-}
-
-nav a:hover {
-    color: var(--accent-2);
+    font-family: "Jacquard 24", system-ui;
+    font-size: 2rem;
 }
 
 .navbar {
@@ -85,19 +77,19 @@ nav a:hover {
     align-items: center;
 }
 
-.hamburger {
-    display: none;
-    background: none;
-    border: none;
+nav a {
+    text-decoration: none;
     color: var(--font);
+    font-family: "Jacquard 24", system-ui;
     font-size: 2rem;
+    transition: all .3s ease;
 }
 
-.nav-menu {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
+nav a:hover {
+    color: var(--accent-1);
 }
+
+
 
 @media (max-width: 600px) {
     .navbar {
@@ -107,26 +99,6 @@ nav a:hover {
     .nav {
         display: flex;
         flex-direction: column;
-    }
-
-    .hamburger {
-        display: block;
-        align-self: flex-end;
-    }
-
-    .nav-menu {
-        display: none;
-    }
-
-    .nav-menu.active {
-        display: flex;
-        flex-direction: column;
-        background-color: var(--font);
-        padding: 1rem;
-    }
-
-    .nav-menu a {
-        color: var(--bg-color-1);
     }
 
     header {
@@ -150,60 +122,110 @@ main {
     }
 }
 
-.about-content,
+.about-content {
+    max-width: 60rem;
+    margin: 0 auto 7rem auto;
+}
+
+.about-content h2 {
+    margin: 2rem 0;
+    font-family: "Jacquard 24", system-ui;
+    font-size: 1.5rem;
+    font-weight: normal;
+    text-align: center;
+}
+
+.about-content img {
+    margin: 0 auto;
+    border-radius: 0.3rem;
+    height: 500px;
+    align-items: center;
+}
+
+.about-content p {
+    padding: 2rem 0;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.resume {
+    text-align: center;
+}
+
+.resume a {
+    text-decoration: none;
+    color: var(--font);
+    padding: 2rem 0;
+    font-size: 1rem;
+    
+    transition: all .3s ease;
+}
+
+.resume a:hover {
+    color: var(--accent-1);
+}
+
 .portfolio-content,
-.contact-content,
 .project-content {
     max-width: 60rem;
     margin: 0 auto 7rem auto;
 }
 
-.about-content h2,
-.portfolio-content h2,
-.contact-content h2,
 .project-content h2 {
     margin: 2rem 0;
+    font-family: "Jacquard 24", system-ui;
+    font-size: 1.5rem;
+    font-weight: normal;
 }
 
 .project-content {
-    text-align: justify;
+    text-align: center;
 }
 
 .project-content img {
     margin: 0 auto;
-    padding: 2rem;
+    border-radius: 0.3rem;
+}
+
+.project-content p {
+    padding: 2rem 0;
+    font-size: 1rem;
+    text-align: center;
 }
 
 .portfolio-content p {
-    padding: 1rem;
+    margin: 2 auto;
 }
 
 .portfolio-item {
     padding: 1rem;
-    background-color: var(--font);
-    color: var(--bg-color-1);
-    border-radius: 0.3rem;
+    border-radius: 0.1rem;
 }
 
 .portfolio-item a {
     text-decoration: none;
-    color: var(--bg-color-1);
+    color: var(--font);
 }
 
 .portfolio-item p {
-    font-size: 1rem;
-}
-
-.portfolio-item h3 {
-    font-size: 1.3rem;
+    padding: 1rem 0;
+    font-family: "Jacquard 24", system-ui;
+    font-size: 1.5rem;
+    text-align: center;
 }
 
 .portfolio-item img {
     border-radius: 0.3rem;
 }
 
+
 footer {
     padding: 1rem 2rem;
+    font-family: "Jacquard 24", system-ui;
+}
+
+footer p {
+    font-size: 1.2rem;
 }
 
 footer img {
@@ -213,10 +235,6 @@ footer img {
 }
 
 @media (max-width: 600px) {
-    footer p {
-        font-size: 1.2rem;
-    }
-
     footer img {
         max-width: 1.5rem;
         margin: 0.2rem;
@@ -224,10 +242,6 @@ footer img {
 }
 
 @media (max-width: 450px) {
-    footer p {
-        font-size: 1rem;
-    }
-
     footer img {
         max-width: 1.5rem;
         margin: 0 0.1rem;
@@ -247,7 +261,6 @@ footer img {
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
-    /* align-items: stretch; */
 }
 
 .flex-item-grid {
