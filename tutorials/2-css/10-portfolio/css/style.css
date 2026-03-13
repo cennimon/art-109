@@ -1,11 +1,11 @@
 /* ------------- color palette */
 
 :root {
-    --bg-color-1: #e1e1e1;
+    --bg-color-1: #b9b7b5;
     --bg-color-2: #454545;
     --font: #454545;
-    --accent-1: #697268;
-    --accent-2: #939d92;
+    --accent-1: #939d92;
+    --accent-2: #697268;
     --dark: #9c9c9c;
 }
 
@@ -51,8 +51,8 @@ html {
 }
 
 body {
-    background-color: var(--bg-color-1);
-    color: var(--font);
+    background-color: var(--bg-color-2);
+    color: var(--bg-color-1);
     font-size: 1.3rem;
     line-height: 1.5;
     font-family: 'Courier New', Courier, monospace;
@@ -66,7 +66,7 @@ header {
 
 header h1 {
     text-decoration: none;
-    color: var(--font);
+    color: var(--bg-color-1);
     font-family: "Jacquard 24", system-ui;
     font-size: 2rem;
 }
@@ -79,7 +79,7 @@ header h1 {
 
 nav a {
     text-decoration: none;
-    color: var(--font);
+    color: var(--bg-color-1);
     font-family: "Jacquard 24", system-ui;
     font-size: 2rem;
     transition: all .3s ease;
@@ -127,10 +127,10 @@ main {
     margin: 0 auto 7rem auto;
 }
 
-.about-content h2 {
+.about-content h1 {
     margin: 2rem 0;
     font-family: "Jacquard 24", system-ui;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: normal;
     text-align: center;
 }
@@ -138,7 +138,6 @@ main {
 .about-content img {
     margin: 0 auto;
     border-radius: 0.3rem;
-    height: 500px;
     align-items: center;
 }
 
@@ -154,10 +153,9 @@ main {
 
 .resume a {
     text-decoration: none;
-    color: var(--font);
+    color: var(--bg-color-1);
     padding: 2rem 0;
     font-size: 1rem;
-    
     transition: all .3s ease;
 }
 
@@ -169,17 +167,39 @@ main {
 .project-content {
     max-width: 60rem;
     margin: 0 auto 7rem auto;
+    text-align: center;
+}
+
+.portfolio-content h1 {
+    font-family: "Jacquard 24", system-ui;
+    font-weight: normal;
+    font-size: 1.7rem;
+    transition: all .3s ease;
+}
+
+.portfolio-content h1:hover {
+    color: var(--accent-1);
+}
+
+.portfolio-item {
+    padding: 1rem;
+    border-radius: 0.1rem;
+}
+
+.portfolio-item a {
+    text-decoration: none;
+    color: var(--bg-color-1);
+}
+
+.portfolio-item img {
+    border-radius: 0.3rem;
 }
 
 .project-content h2 {
     margin: 2rem 0;
     font-family: "Jacquard 24", system-ui;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: normal;
-}
-
-.project-content {
-    text-align: center;
 }
 
 .project-content img {
@@ -192,32 +212,6 @@ main {
     font-size: 1rem;
     text-align: center;
 }
-
-.portfolio-content p {
-    margin: 2 auto;
-}
-
-.portfolio-item {
-    padding: 1rem;
-    border-radius: 0.1rem;
-}
-
-.portfolio-item a {
-    text-decoration: none;
-    color: var(--font);
-}
-
-.portfolio-item p {
-    padding: 1rem 0;
-    font-family: "Jacquard 24", system-ui;
-    font-size: 1.5rem;
-    text-align: center;
-}
-
-.portfolio-item img {
-    border-radius: 0.3rem;
-}
-
 
 footer {
     padding: 1rem 2rem;
