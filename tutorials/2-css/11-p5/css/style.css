@@ -1,0 +1,262 @@
+/* ------------- color palette */
+
+:root {
+    --bg-color-1: #b9b7b5;
+    --bg-color-2: #454545;
+    --font: #454545;
+    --accent-1: #939d92;
+    --accent-2: #697268;
+    --dark: #9c9c9c;
+}
+
+
+
+/* ------------- css resets */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* make images responsive */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* respect user font size preferences */
+html {
+    font-size: 100%;
+}
+
+/* Change box-sizing default to border-box */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* Remove default spacing */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ------------- general css */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color-2);
+    color: var(--bg-color-1);
+    font-size: 1.3rem;
+    line-height: 1.5;
+    font-family: 'Courier New', Courier, monospace;
+    /* text-align: justify; */
+}
+
+header {
+    padding: 2rem 2rem;
+    margin-bottom: 5rem;
+}
+
+header h1 {
+    text-decoration: none;
+    color: var(--bg-color-1);
+    font-family: "Jacquard 24", system-ui;
+    font-size: 2rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--bg-color-1);
+    font-family: "Jacquard 24", system-ui;
+    font-size: 2rem;
+    transition: all .3s ease;
+}
+
+nav a:hover {
+    color: var(--accent-1);
+}
+
+
+
+@media (max-width: 600px) {
+    .navbar {
+        align-items: flex-start;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header {
+        padding: 2rem 2rem;
+    }
+}
+
+main {
+    margin: 0;
+}
+
+@media (max-width: 968px) {
+    main {
+        margin: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        margin: 2rem;
+    }
+}
+
+.about-content {
+    max-width: 60rem;
+    margin: 0 auto 7rem auto;
+}
+
+.about-content h1 {
+    margin: 2rem 0;
+    font-family: "Jacquard 24", system-ui;
+    font-size: 1.7rem;
+    font-weight: normal;
+    text-align: center;
+}
+
+.about-content img {
+    margin: 0 auto;
+    border-radius: 0.3rem;
+    align-items: center;
+}
+
+.about-content p {
+    padding: 2rem 0;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.resume {
+    text-align: center;
+}
+
+.resume a {
+    text-decoration: none;
+    color: var(--bg-color-1);
+    padding: 2rem 0;
+    font-size: 1rem;
+    transition: all .3s ease;
+}
+
+.resume a:hover {
+    color: var(--accent-1);
+}
+
+.portfolio-content,
+.project-content {
+    max-width: 60rem;
+    margin: 0 auto 7rem auto;
+    text-align: center;
+}
+
+.portfolio-content h1 {
+    font-family: "Jacquard 24", system-ui;
+    font-weight: normal;
+    font-size: 1.7rem;
+    transition: all .3s ease;
+}
+
+.portfolio-content h1:hover {
+    color: var(--accent-1);
+}
+
+.portfolio-item {
+    padding: 1rem;
+    border-radius: 0.1rem;
+}
+
+.portfolio-item a {
+    text-decoration: none;
+    color: var(--bg-color-1);
+}
+
+.portfolio-item img {
+    border-radius: 0.3rem;
+}
+
+.project-content h2 {
+    margin: 2rem 0;
+    font-family: "Jacquard 24", system-ui;
+    font-size: 1.7rem;
+    font-weight: normal;
+}
+
+.project-content img {
+    margin: 0 auto;
+    border-radius: 0.3rem;
+}
+
+.project-content p {
+    padding: 2rem 0;
+    font-size: 1rem;
+    text-align: center;
+}
+
+footer {
+    padding: 1rem 2rem;
+    font-family: "Jacquard 24", system-ui;
+}
+
+footer p {
+    font-size: 1.2rem;
+}
+
+footer img {
+    display: inline;
+    max-width: 2.5rem;
+    margin: 0 0.5rem;
+}
+
+@media (max-width: 600px) {
+    footer img {
+        max-width: 1.5rem;
+        margin: 0.2rem;
+    }
+}
+
+@media (max-width: 450px) {
+    footer img {
+        max-width: 1.5rem;
+        margin: 0 0.1rem;
+    }
+}
+
+/* ------------- flex styling */
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-container-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.flex-item-grid {
+    flex: 1 1 15rem;
+}
