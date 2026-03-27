@@ -1,0 +1,18 @@
+.meow {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.cat {
+    position: relative;
+    margin: 50px auto;
+    max-width: 600px;
+    font-size: 1.3rem;
+}
+
+.meow2 {
+    position: absolute;
+    top: 15px;
+    left: 50px;
+}
