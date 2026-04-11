@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>net art</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <h1 >&#128037 bird guesser &#128037</h1>
+    </header>
+
+    <main>
+        <div>
+            <img src="media/birds.gif" alt="birds" class="bird">
+        </div>
+        <section>
+            <label class="box-title" for="input">guess the bird</label>
+            <input class="textbox" type="text" id="input" name="input" placeholder="what is it??">
+        </section>
+        <div>
+            <button class="button" type="button" onclick="checkGuess()">guess</button>
+        </div>
+
+        <div class="popup" id="popup">
+            <p class="popup-text" id="popup-text"></p>
+            <button class="popup-button" onclick="closePopup()">oh ok</button>
+        </div>
+
+    <script src="js/button.js"></script>
+</body>
+
+</html>

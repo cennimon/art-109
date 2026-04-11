@@ -1,0 +1,104 @@
+body {
+    background-color: #ddefef;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.2rem;
+    font-family: "Macondo Swash Caps", cursive;
+}
+
+header h1 {
+    font-weight: normal;
+}
+
+.bird {
+    display: flex;
+    justify-content: center;
+    margin: 1rem auto;
+    border-radius: 5px;
+}
+
+.box-title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.2rem;
+    font-size: 1.5rem;
+    font-family: "Macondo Swash Caps", cursive;
+    font-weight: 400;
+}
+
+.textbox {
+    display: block;
+    margin: auto;
+    margin-bottom: 1.2rem;
+    font-size: 1.2rem;
+    font-family: "Macondo Swash Caps", cursive;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.button {
+    display: block;
+    margin: auto;
+    margin-bottom: 1.2rem;
+    font-size: 1.2rem;
+    background-color: #85c0c2;
+    border: none;
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+    font-family: "Macondo Swash Caps", cursive;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.button:hover {
+    background-color: #5f938f;
+    color: #d7f6f6;
+    transition: all .3s ease;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ddefef;
+    padding: 20px;
+    border-radius: 5px;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.popup button {
+    margin-top: 10px;
+    padding: 0.5rem 2rem;
+    border: 0;
+    border-radius: 5px;
+    background-color: #85c0c2;
+    font-size: 1rem;
+    font-family: "Macondo Swash Caps", cursive;
+    cursor: pointer;
+}
+
+.popup button:hover {
+    background-color: #5f938f;
+    color: #d7f6f6;
+    transition: all .3s ease;
+}
+
+.popup-text {
+    font-size: 1.2rem;
+    color: #000000;
+    border-radius: 5px;
+    font-family: "Macondo Swash Caps", cursive;
+    font-weight: 400;
+}
