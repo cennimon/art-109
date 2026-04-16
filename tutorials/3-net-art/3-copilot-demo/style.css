@@ -1,0 +1,531 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+:root {
+  color-scheme: dark;
+  color: #fce6ff;
+  background: #ff2ca8;
+  accent-color: #ff2ca8;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  min-height: 100%;
+  font-family: 'VT323', Monaco, 'Courier New', monospace;
+  font-weight: 400;
+  background-color: #ff2ca8;
+  background-image:
+    repeating-linear-gradient(40deg, rgba(0, 0, 0, 0.42) 0, rgba(0, 0, 0, 0.42) 7%, transparent 7%, transparent 18%),
+    repeating-linear-gradient(-30deg, rgba(0, 0, 0, 0.38) 0, rgba(0, 0, 0, 0.38) 5%, transparent 5%, transparent 14%);
+  color: #f7e7ff;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.08), transparent 18%),
+              radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.06), transparent 24%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.pixel-characters {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.pixel-character {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  transform-origin: center;
+}
+
+.pixel-character::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 1px;
+  transform: scale(5);
+  transform-origin: top left;
+  background: #000;
+}
+
+.chibi1 {
+  top: 18%;
+  left: 6%;
+  animation: float-1 7s ease-in-out infinite;
+}
+
+.chibi1::before {
+  box-shadow:
+    1px 0 #000,2px 0 #000,3px 0 #000,4px 0 #000,5px 0 #000,6px 0 #000,
+    0 1px #000,1px 1px #ff2ca8,2px 1px #ff2ca8,3px 1px #ff2ca8,4px 1px #ff2ca8,5px 1px #ff2ca8,6px 1px #000,
+    0 2px #000,1px 2px #ff2ca8,2px 2px #fff,3px 2px #fff,4px 2px #fff,5px 2px #ff2ca8,6px 2px #000,
+    0 3px #000,1px 3px #ff2ca8,2px 3px #fff,3px 3px #000,4px 3px #fff,5px 3px #ff2ca8,6px 3px #000,
+    0 4px #000,1px 4px #ff2ca8,2px 4px #ff2ca8,3px 4px #ff2ca8,4px 4px #ff2ca8,5px 4px #ff2ca8,6px 4px #000,
+    1px 5px #000,2px 5px #ff2ca8,3px 5px #ff2ca8,4px 5px #ff2ca8,5px 5px #000,
+    2px 6px #000,3px 6px #000,4px 6px #000,5px 6px #000;
+}
+
+.chibi2 {
+  top: 46%;
+  right: 10%;
+  animation: float-2 6.5s ease-in-out infinite reverse;
+}
+
+.chibi2::before {
+  box-shadow:
+    1px 0 #000,2px 0 #000,3px 0 #000,4px 0 #000,5px 0 #000,
+    0 1px #000,1px 1px #fff,2px 1px #ff2ca8,3px 1px #ff2ca8,4px 1px #fff,5px 1px #000,
+    0 2px #000,1px 2px #ff2ca8,2px 2px #fff,3px 2px #fff,4px 2px #fff,5px 2px #ff2ca8,6px 2px #000,
+    1px 3px #000,2px 3px #fff,3px 3px #000,4px 3px #fff,5px 3px #000,
+    2px 4px #000,3px 4px #ff2ca8,4px 4px #ff2ca8,5px 4px #000,
+    2px 5px #000,3px 5px #ff2ca8,4px 5px #000;
+}
+
+.chibi3 {
+  bottom: 14%;
+  left: 38%;
+  animation: float-3 8.2s ease-in-out infinite;
+}
+
+.chibi3::before {
+  box-shadow:
+    1px 0 #000,2px 0 #000,3px 0 #000,4px 0 #000,5px 0 #000,6px 0 #000,
+    0 1px #000,1px 1px #ff2ca8,2px 1px #ff2ca8,3px 1px #fff,4px 1px #fff,5px 1px #ff2ca8,6px 1px #000,
+    0 2px #000,1px 2px #fff,2px 2px #fff,3px 2px #fff,4px 2px #fff,5px 2px #fff,6px 2px #000,
+    0 3px #000,1px 3px #ff2ca8,2px 3px #fff,3px 3px #000,4px 3px #fff,5px 3px #ff2ca8,6px 3px #000,
+    0 4px #000,1px 4px #ff2ca8,2px 4px #ff2ca8,3px 4px #ff2ca8,4px 4px #ff2ca8,5px 4px #ff2ca8,6px 4px #000,
+    1px 5px #000,2px 5px #ff2ca8,3px 5px #ff2ca8,4px 5px #ff2ca8,5px 5px #000;
+}
+
+.chibi4 {
+  top: 8%;
+  right: 20%;
+  animation: float-4 9.2s ease-in-out infinite;
+}
+
+.chibi4::before {
+  box-shadow:
+    1px 0 #000,2px 0 #000,3px 0 #000,4px 0 #000,5px 0 #000,
+    0 1px #000,1px 1px #fff,2px 1px #ff2ca8,3px 1px #ff2ca8,4px 1px #fff,5px 1px #000,
+    0 2px #000,1px 2px #ff2ca8,2px 2px #fff,3px 2px #fff,4px 2px #fff,5px 2px #ff2ca8,6px 2px #000,
+    1px 3px #000,2px 3px #fff,3px 3px #000,4px 3px #fff,5px 3px #000,
+    2px 4px #000,3px 4px #ff2ca8,4px 4px #ff2ca8,5px 4px #000,
+    2px 5px #000,3px 5px #ff2ca8,4px 5px #000;
+}
+
+.chibi5 {
+  top: 34%;
+  left: 18%;
+  animation: float-5 8.6s ease-in-out infinite reverse;
+}
+
+.chibi5::before {
+  box-shadow:
+    1px 0 #000,2px 0 #000,3px 0 #000,4px 0 #000,5px 0 #000,6px 0 #000,
+    0 1px #000,1px 1px #ff2ca8,2px 1px #ff2ca8,3px 1px #fff,4px 1px #ff2ca8,5px 1px #ff2ca8,6px 1px #000,
+    0 2px #000,1px 2px #fff,2px 2px #fff,3px 2px #fff,4px 2px #fff,5px 2px #fff,6px 2px #000,
+    0 3px #000,1px 3px #ff2ca8,2px 3px #fff,3px 3px #000,4px 3px #fff,5px 3px #ff2ca8,6px 3px #000,
+    0 4px #000,1px 4px #ff2ca8,2px 4px #ff2ca8,3px 4px #ff2ca8,4px 4px #ff2ca8,5px 4px #ff2ca8,6px 4px #000,
+    1px 5px #000,2px 5px #ff2ca8,3px 5px #ff2ca8,4px 5px #ff2ca8,5px 5px #000;
+}
+
+.chibi6 {
+  bottom: 22%;
+  right: 30%;
+  animation: float-6 7.8s ease-in-out infinite;
+}
+
+.chibi6::before {
+  box-shadow:
+    1px 0 #000,2px 0 #000,3px 0 #000,4px 0 #000,5px 0 #000,
+    0 1px #000,1px 1px #ff2ca8,2px 1px #ff2ca8,3px 1px #ff2ca8,4px 1px #ff2ca8,5px 1px #ff2ca8,6px 1px #000,
+    0 2px #000,1px 2px #fff,2px 2px #fff,3px 2px #fff,4px 2px #fff,5px 2px #fff,6px 2px #000,
+    0 3px #000,1px 3px #ff2ca8,2px 3px #fff,3px 3px #000,4px 3px #fff,5px 3px #ff2ca8,6px 3px #000,
+    0 4px #000,1px 4px #ff2ca8,2px 4px #ff2ca8,3px 4px #ff2ca8,4px 4px #ff2ca8,5px 4px #ff2ca8,6px 4px #000,
+    1px 5px #000,2px 5px #ff2ca8,3px 5px #ff2ca8,4px 5px #ff2ca8,5px 5px #000;
+}
+
+.pixel-cloud {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  transform: scale(5);
+  transform-origin: top left;
+}
+
+.pixel-cloud::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 1px;
+  background: #000;
+  box-shadow:
+    0 0 #000,1px 0 #000,2px 0 #000,3px 0 #000,4px 0 #000,5px 0 #000,6px 0 #000,
+    -1px 1px #000,0 1px #000,1px 1px #000,2px 1px #000,3px 1px #000,4px 1px #000,5px 1px #000,6px 1px #000,7px 1px #000,
+    0 2px #000,1px 2px #000,2px 2px #000,3px 2px #000,4px 2px #000,5px 2px #000,6px 2px #000,7px 2px #000,
+    1px 3px #000,2px 3px #000,3px 3px #000,4px 3px #000,5px 3px #000,6px 3px #000;
+}
+
+.pixel-cloud::after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 3px;
+  width: 1px;
+  height: 1px;
+  background: #ff7ac2;
+  box-shadow: 0 0 #ff7ac2, 10px 4px #ff7ac2, 20px 8px #ff7ac2;
+}
+
+.cloud1 {
+  top: 10%;
+  left: 20%;
+  animation: drift-cloud 18s linear infinite;
+}
+
+.cloud2 {
+  top: 6%;
+  right: 18%;
+  animation: drift-cloud 16s linear infinite reverse;
+}
+
+@keyframes float-1 {
+  0%, 100% { transform: translate(0, 0) scale(1.0); }
+  50% { transform: translate(18px, -16px) scale(1.05); }
+}
+
+@keyframes float-2 {
+  0%, 100% { transform: translate(0, 0) scale(1.0); }
+  50% { transform: translate(-14px, 20px) scale(0.96); }
+}
+
+@keyframes float-3 {
+  0%, 100% { transform: translate(0, 0) scale(1.0); }
+  50% { transform: translate(22px, -12px) scale(1.08); }
+}
+
+@keyframes float-4 {
+  0%, 100% { transform: translate(0, 0) scale(1.0); }
+  50% { transform: translate(-20px, -14px) scale(1.04); }
+}
+
+@keyframes float-5 {
+  0%, 100% { transform: translate(0, 0) scale(1.0); }
+  50% { transform: translate(18px, 22px) scale(0.98); }
+}
+
+@keyframes float-6 {
+  0%, 100% { transform: translate(0, 0) scale(1.0); }
+  50% { transform: translate(-18px, 14px) scale(1.03); }
+}
+
+@keyframes drift-cloud {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(18px, 6px) scale(1); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+.page-wrap {
+  position: relative;
+  z-index: 1;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 18px 24px;
+  background: rgba(0, 0, 0, 0.88);
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.45);
+  margin-bottom: 28px;
+}
+
+.brand h1 {
+  font-size: clamp(2.4rem, 3vw, 3rem);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #ff98d6;
+  text-shadow: 0 0 18px rgba(255, 44, 168, 0.5);
+  font-family: 'Papyrus', 'Segoe Script', fantasy;
+}
+
+.brand p,
+.nav-links a,
+.section-title,
+.info-block strong,
+.card p,
+.card li,
+.card a,
+.status-item p,
+.friend-card span,
+.footer-note {
+  color: #f5d5ff;
+}
+
+.brand p {
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: #ffb3e5;
+  text-decoration: none;
+  font-size: 0.92rem;
+  letter-spacing: 0.08em;
+  transition: color 0.2s ease;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.35);
+  padding-bottom: 4px;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.panel {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.9);
+  padding: 24px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02), 0 18px 50px rgba(0, 0, 0, 0.26);
+}
+
+.profile-card,
+.card,
+.status-item,
+.friend-card {
+  border-radius: 0;
+}
+
+.profile-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border: 2px solid rgba(255, 44, 168, 0.55);
+  box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.35);
+  position: relative;
+  background: #000;
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.profile-image::before {
+  display: none;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.profile-name h2 {
+  font-size: 2rem;
+  letter-spacing: 0.14em;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.profile-name span {
+  color: #ffb8e5;
+  letter-spacing: 0.12em;
+  font-size: 0.95rem;
+}
+
+.mood-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 44, 168, 0.35);
+  color: #ffedf8;
+  background: rgba(255, 44, 168, 0.12);
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.info-block {
+  display: grid;
+  gap: 10px;
+  line-height: 1.7;
+  color: #f7e7ff;
+  font-size: 0.94rem;
+}
+
+.info-block strong {
+  display: inline-block;
+  width: 84px;
+  color: #ffb3e5;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ffb3e5;
+  font-size: 0.9rem;
+}
+
+.section-title small {
+  color: #ffc5ea;
+  font-size: 0.8rem;
+}
+
+.card {
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+  background: rgba(0, 0, 0, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.card h3 {
+  font-size: 1.05rem;
+  color: #ff9ad7;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.card ul {
+  display: grid;
+  gap: 8px;
+  padding-left: 16px;
+  list-style: disc;
+  margin-top: 4px;
+}
+
+.card a {
+  color: #ff7ac2;
+}
+
+.card a:hover {
+  color: #ffffff;
+}
+
+.status-feed {
+  display: grid;
+  gap: 18px;
+}
+
+.status-item {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 18px;
+  background: rgba(8, 8, 8, 0.95);
+}
+
+.status-item time {
+  display: block;
+  color: #f5d5ff;
+  margin-bottom: 10px;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.friend-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.friend-card {
+  padding: 14px;
+  background: rgba(5, 5, 5, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.friend-card strong {
+  color: #ffdeff;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.friend-card span {
+  color: #e7d5f5;
+  font-size: 0.88rem;
+}
+
+.friends-full span {
+  display: block;
+  color: #f0dff5;
+  font-size: 0.92rem;
+  letter-spacing: 0.04em;
+}
+
+.footer-note {
+  margin-top: 30px;
+  text-align: center;
+  color: rgba(255, 215, 255, 0.85);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
