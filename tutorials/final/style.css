@@ -194,6 +194,7 @@ h4 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+    margin: 10px 0;
 }
 
 /* ai for friend grid */
@@ -206,8 +207,41 @@ h4 {
 
 .person p {
     margin: 5px 0 10px;
+    font-size: 1.1rem;
 }
 
 .person img {
     margin-bottom: 10px;
+}
+
+.comments-table {
+    display: table-row-group;
+    width: 100%;
+    border: 5px solid var(--accent-1);
+    border-collapse: separate;
+    vertical-align: middle;
+    margin: 10px;
+}
+
+.comments-table td {
+    color: var(--font-1);
+    padding: 50px 0;
+    text-align: left;
+    border: 5px solid var(--accent-1);
+}
+
+.comments-table th {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.comments-table td {
+    font-size: 1.1rem;
+    padding: 10px;
+    text-align: left;
+}
+
+.comments-table tr {
+    padding: 10px;
 }
