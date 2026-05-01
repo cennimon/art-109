@@ -1,0 +1,213 @@
+/* ------------- color palette */
+
+:root {
+    --font-1: #c35656;
+    --font-2: #7cb82d;
+    --accent-1: #503acc;
+    --accent-2: #68ff81;
+}
+
+
+
+/* ------------- css resets */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* make images responsive */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* respect user font size preferences */
+html {
+    font-size: 100%;
+}
+
+/* Change box-sizing default to border-box */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* Remove default spacing */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    text-decoration: none;
+    font-weight: normal;
+}
+
+/* ------------- general css */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 1000px;
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: wheat;
+}
+
+div {
+    display: block;
+}
+
+
+header {
+    background-color: var(--accent-1);
+    margin: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 30px;
+
+}
+
+.title a {
+    font-size: 2.5rem;
+    color: var(--font-1);
+}
+
+.login a {
+    font-size: 1rem;
+    color: var(--font-1);
+}
+
+.left-column {
+    display: table-cell;
+    width: 40%;
+    padding: 10px;
+}
+
+.heading {
+    background-color: var(--accent-1);
+    padding: 5px 10px;
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: var(--font-1);
+    text-align: center;
+}
+
+.about {
+    margin: 5px 0 0 0;
+    font-size: 1.1rem;
+}
+
+.status {
+    margin: 5px 0 0 0;
+    font-size: 1.1rem;
+}
+
+.status h4 {
+    font-weight: bold;
+}
+
+.status p,
+h4 {
+    display: inline-block;
+}
+
+.mood {
+    margin: 5px 0 0 0;
+    font-size: 1.1rem;
+}
+
+.mood h4 {
+    font-weight: bold;
+}
+
+.mood p,
+h4 {
+    display: inline-block;
+}
+
+.contact {
+    margin: 5px 0 0 0;
+    font-size: 1.1rem;
+}
+
+.contact p {
+    display: inline-block;
+    padding: 0 10px 0 0;
+    text-decoration: underline;
+}
+
+.interests {
+    margin: 30px 0 0 0;
+    font-size: 1.1rem;
+}
+
+.interests div {
+    margin: 5px 0 0 0;
+}
+
+.interests h4 {
+    font-weight: bold;
+}
+
+.interests p,
+h4 {
+    display: inline-block;
+}
+
+.right-column {
+    display: table-cell;
+    width: 60%;
+    padding: 10px;
+}
+
+.updates p {
+    margin: 5px 0 0 0;
+    font-size: 1.1rem;
+    text-decoration: underline;
+}
+
+.blurb {
+    margin: 30px 0 0 0;
+}
+
+.blurb p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+.friends {
+    margin: 30px 0 0 0;
+}
+
+.friends-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+/* ai for friend grid */
+
+.person {
+    background-color: var(--accent-2);
+    padding: 10px;
+    text-align: center;
+}
+
+.person p {
+    margin: 5px 0 10px;
+}
+
+.person img {
+    margin-bottom: 10px;
+}
