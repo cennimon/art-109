@@ -1,10 +1,10 @@
 /* ------------- color palette */
 
 :root {
-    --font-1: #c35656;
-    --font-2: #7cb82d;
-    --accent-1: #503acc;
-    --accent-2: #68ff81;
+    --font-1: rgb(164, 182, 194);
+    --font-2: rgb(220, 222, 205);
+    --accent-1: rgba(46, 37, 34, 0.8);
+    --accent-2: rgba(151, 145, 133, 0.8);
 }
 
 
@@ -52,12 +52,21 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    background-image: url("media/bg1.png");
+    background-size: contain;
+    font-family: "Special Elite", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
 .container {
     width: 1000px;
     max-width: 100%;
     margin: 20px auto;
     padding: 10px;
-    background-color: wheat;
+    background-image: url("media/bg2.png");
+    box-shadow: 0 0 30px rgba(27, 36, 50, 0.8);
 }
 
 div {
@@ -66,25 +75,25 @@ div {
 
 
 header {
-    background-color: var(--accent-1);
+    /* background-color: var(--accent-1); */
+    background-image: url("media/bg1.png");
+    background-size: cover;
     margin: 10px;
+    box-shadow: 0 0 50px rgba(27, 36, 50, 0.8);
 }
 
 nav {
-    display: flex;
+    display: border-box;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 30px;
-
+    padding: 20px 30px;
 }
 
 .title a {
+    font-family: "Rock Salt", cursive;
+    font-weight: 400;
+    font-style: normal;
     font-size: 2.5rem;
-    color: var(--font-1);
-}
-
-.login a {
-    font-size: 1rem;
     color: var(--font-1);
 }
 
@@ -94,23 +103,43 @@ nav {
     padding: 10px;
 }
 
+.box {
+    background-color: var(--accent-2);
+    padding: 10px;
+    margin: 0 0 20px 0;
+    box-shadow: 0 0 10px rgba(140, 186, 255, 0.5);
+}
+
 .heading {
-    background-color: var(--accent-1);
-    padding: 5px 10px;
-    margin: 10px 0;
-    font-size: 1.2rem;
+    /* background-color: var(--accent-1); */
+    background-image: url("media/bg1.png");
+    background-size: cover;
+    margin: 0 0 10px 0;
+    font-family: "Rock Salt", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
     color: var(--font-1);
     text-align: center;
+    vertical-align: middle;
+    box-shadow: 0 0 30px rgba(27, 36, 50, 0.8);
+}
+
+.pfp {
+    margin: 20px 0 0 0;
+    box-shadow: 0 0 15px rgba(27, 36, 50, 0.5);
 }
 
 .about {
-    margin: 5px 0 0 0;
-    font-size: 1.1rem;
+    margin: 10px 0 0 0;
+    font-size: 1rem;
+    color: var(--font-2);
 }
 
 .status {
-    margin: 5px 0 0 0;
-    font-size: 1.1rem;
+    margin: 10px 0 0 0;
+    font-size: 1rem;
+    color: var(--font-2);
 }
 
 .status h4 {
@@ -123,8 +152,9 @@ h4 {
 }
 
 .mood {
-    margin: 5px 0 0 0;
-    font-size: 1.1rem;
+    margin: 10px 0 0 0;
+    font-size: 1rem;
+    color: var(--font-2);
 }
 
 .mood h4 {
@@ -137,8 +167,9 @@ h4 {
 }
 
 .contact {
-    margin: 5px 0 0 0;
-    font-size: 1.1rem;
+    margin: 10px 0 0 0;
+    font-size: 1rem;
+    color: var(--font-2);
 }
 
 .contact p {
@@ -148,21 +179,45 @@ h4 {
 }
 
 .interests {
-    margin: 30px 0 0 0;
-    font-size: 1.1rem;
-}
-
-.interests div {
-    margin: 5px 0 0 0;
-}
-
-.interests h4 {
-    font-weight: bold;
+    font-size: 1rem;
 }
 
 .interests p,
-h4 {
+a {
     display: inline-block;
+    color: var(--font-2);
+}
+
+.interests td a {
+    text-decoration: underline;
+    margin: 5px 0;
+
+}
+
+.interests-table {
+    display: table-row-group;
+    width: 100%;
+    border-collapse: separate;
+    vertical-align: middle;
+}
+
+.interests-table td {
+    font-size: 1rem;
+    color: var(--font-2);
+    text-align: left;
+    font-weight: bold;
+}
+
+.interests-table td:first-child {
+    padding: 0 10px 10px 0;
+}
+
+.interests-table td:last-child {
+    padding: 0 0 20px 10px;
+}
+
+.interests-table td p {
+    margin: 2.5px 0;
 }
 
 .right-column {
@@ -173,75 +228,86 @@ h4 {
 
 .updates p {
     margin: 5px 0 0 0;
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-decoration: underline;
+    color: var(--font-2);
 }
 
 .blurb {
     margin: 30px 0 0 0;
+    color: var(--font-2);
 }
 
 .blurb p {
     margin: 10px 0;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .friends {
     margin: 30px 0 0 0;
+    color: var(--font-2);
 }
 
 .friends-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    margin: 10px 0;
+    margin: 20px 0 0 0;
 }
 
 /* ai for friend grid */
 
 .person {
-    background-color: var(--accent-2);
+    background-image: url("media/bg1.png");
+    background-size: cover;
     padding: 10px;
     text-align: center;
+    box-shadow: 0 0 30px rgba(27, 36, 50, 0.8);
 }
 
 .person p {
-    margin: 5px 0 10px;
-    font-size: 1.1rem;
+    margin: 0 0 5px 0;
+    font-size: 1rem;
 }
 
 .person img {
-    margin-bottom: 10px;
+    box-shadow: 0 0 30px rgba(27, 36, 50, 0.8);
 }
 
 .comments-table {
-    display: table-row-group;
     width: 100%;
-    border: 5px solid var(--accent-1);
-    border-collapse: separate;
-    vertical-align: middle;
-    margin: 10px;
+}
+
+.comments-table table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
 .comments-table td {
-    color: var(--font-1);
-    padding: 50px 0;
-    text-align: left;
-    border: 5px solid var(--accent-1);
-}
-
-.comments-table th {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin: 10px 0;
-}
-
-.comments-table td {
-    font-size: 1.1rem;
+    color: var(--font-2);
+    font-size: 1rem;
     padding: 10px;
     text-align: left;
+    vertical-align: left;
+}
+
+.comments-table td:first-child {
+    width: 120px;
+}
+
+.comments-table img {
+    width: 100px;
+    box-shadow: 0 0 15px rgba(27, 36, 50, 0.5);
+}
+
+.comments-table p {
+    margin: 5px 0;
+    text-align: left;
+    font-weight: bold;
 }
 
 .comments-table tr {
     padding: 10px;
 }
+
+/* ai for comments table */
