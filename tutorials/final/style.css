@@ -136,6 +136,10 @@ nav {
     color: var(--font-2);
 }
 
+.about p {
+    line-height: 20px;
+}
+
 .status {
     margin: 10px 0 0 0;
     font-size: 1rem;
@@ -184,7 +188,7 @@ h4 {
 
 .interests p,
 a {
-    display: inline-block;
+    display: block;
     color: var(--font-2);
 }
 
@@ -226,8 +230,8 @@ a {
     padding: 10px;
 }
 
-.updates p {
-    margin: 5px 0 0 0;
+.updates a {
+    margin: 10px 0 0 0;
     font-size: 1rem;
     text-decoration: underline;
     color: var(--font-2);
@@ -286,7 +290,7 @@ a {
 .comments-table td {
     color: var(--font-2);
     font-size: 1rem;
-    padding: 10px;
+    padding: 5px;
     text-align: left;
     vertical-align: left;
 }
@@ -303,7 +307,6 @@ a {
 .comments-table p {
     margin: 5px 0;
     text-align: left;
-    font-weight: bold;
 }
 
 .comments-table tr {
@@ -311,3 +314,10 @@ a {
 }
 
 /* ai for comments table */
+
+.blurb-pic img {
+    height: 500px;
+    justify-self: center;
+    margin: 20px 0;
+    box-shadow: 0 0 30px rgba(27, 36, 50, 0.8);
+}
